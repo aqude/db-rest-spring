@@ -14,4 +14,10 @@ class CountryController(
 ) {
     @GetMapping // http://localhost:8080/countries
     fun getAll(@RequestParam("page") pageIndex: Int): List<CountryDto> = countryService.getAll(pageIndex)
+
+    @GetMapping("/id") // http://localhost:8080/countries/id?id=1
+    fun byId(@RequestParam("id") id: Int): CountryDto = countryService.byId(id)
+
+    @GetMapping("/name") // http://localhost:8080/countries/name?namecountry=Russia
+    fun byName(@RequestParam("namecountry") namecountry: String): List<CountryDto> = countryService.ByName(namecountry)
 }

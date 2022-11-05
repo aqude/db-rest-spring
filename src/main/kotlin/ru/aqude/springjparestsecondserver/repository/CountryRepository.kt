@@ -6,4 +6,5 @@ import ru.aqude.springjparestsecondserver.entity.CountryEntity
 
 interface CountryRepository: CrudRepository<CountryEntity, Int> {
    fun findByOrderByNamecountry(pageable: PageRequest): List<CountryEntity>
+    fun findByNamecountryStartsWithIgnoreCaseOrderByNamecountry(namecountry: String): List<CountryEntity>
 }
