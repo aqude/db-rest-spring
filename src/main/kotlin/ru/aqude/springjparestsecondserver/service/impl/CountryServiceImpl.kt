@@ -16,7 +16,7 @@ class CountryServiceImpl (private val countryRepository: CountryRepository,) : C
 
     private fun CountryEntity.toDto() : CountryDto = CountryDto(
         id = this.id,
-//        nameCountry = this.nameCountry,
+        namecountry = this.namecountry,
         population = this.population,
         area = this.area,
         capital = this.capital,

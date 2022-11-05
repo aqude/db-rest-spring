@@ -8,7 +8,7 @@ class CountryEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int = 0,
-   // val nameCountry: String = "",
+    val namecountry: String = "",
     val population: Int = 0,
     val area: Int = 0,
     val capital: String = "",
